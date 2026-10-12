@@ -178,7 +178,7 @@ These values depend on the data transmitted by the program. The fill-level graph
 
 ### Project Links
 
-- **GitHub Repository:** [Smart Dustbin IoT Project](https://github.com/dinah0006/Smart-DustBin)
+- **GitHub Repository:** [Smart Dustbin IoT Project](https://github.com/srimathisakthi2006-max/Smart-dustbin-project-.git)
 - **Wokwi Simulation:** [View Smart Dustbin Simulation](https://wokwi.com/projects/475963023334297601)
 - **ThingSpeak Channel:** [View ThingSpeak Dashboard](https://thingspeak.mathworks.com/channels/3506250)
 - **Project Report:** `report/smart-dustbin-report.pdf`
