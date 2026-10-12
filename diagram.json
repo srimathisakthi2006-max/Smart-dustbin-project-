@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "author": "SmartBin",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp32", "top": 120, "left": 450, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic",
+      "top": -36.9,
+      "left": 197.5,
+      "attrs": { "distance": "244" }
+    },
+    { "type": "wokwi-servo", "id": "servo", "top": 30, "left": 700, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "greenLed",
+      "top": 380,
+      "left": 380,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "greenResistor",
+      "top": 380,
+      "left": 300,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "redLed",
+      "top": 418.8,
+      "left": 666.2,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "redResistor",
+      "top": 380,
+      "left": 570,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "ultrasonic:VCC", "esp32:5V", "red", [] ],
+    [ "ultrasonic:GND", "esp32:GND.1", "black", [] ],
+    [ "ultrasonic:TRIG", "esp32:D5", "green", [] ],
+    [ "ultrasonic:ECHO", "esp32:D18", "green", [] ],
+    [ "servo:V+", "esp32:5V", "red", [] ],
+    [ "servo:GND", "esp32:GND.1", "black", [] ],
+    [ "servo:PWM", "esp32:D13", "orange", [] ],
+    [ "esp32:D26", "greenResistor:1", "green", [] ],
+    [ "greenResistor:2", "greenLed:A", "green", [] ],
+    [ "greenLed:C", "esp32:GND.1", "black", [] ],
+    [ "esp32:D27", "redResistor:1", "red", [] ],
+    [ "redResistor:2", "redLed:A", "red", [] ],
+    [ "redLed:C", "esp32:GND.1", "black", [] ]
+  ],
+  "dependencies": {}
+}
